@@ -50,7 +50,7 @@ setTimeout(function(){delete message;},30000);
 		if(fs.existsSync(`cmds/${command}.js`)) {
 			let rcommand=command;
 			if((command[command]=fs.readFileSync(`cmds/${command}.js`,'utf8',(err)=>{console.log(err);})).startsWith('alias:')) {
-				rcommand = fs.readFileSync(`cmds/${command}.js`,'utf8',(err)=>{console.log(err);}).slice(6);
+				rcommand = command[command].slice(6);
 				commands[command] = fs.readFileSync(`cmds/${rcommand}.js`,'utf8',(err)=>{console.log(err);});
 			}
 		}
