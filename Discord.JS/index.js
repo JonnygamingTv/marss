@@ -104,9 +104,6 @@ que[ID][4].subscribe(que[ID][2]);}
 if(!que[ID][6]||!que[ID][0]){
 que[ID][5]=DiscordVoice.createAudioResource('https://marss.one/sa?i='+que[ID][0][0]);
 que[ID][2].play(que[ID][5]);
-//que[ID][4].dispatchAudio();
-//que[ID][2].setVolume(0.7);
-//que[ID][2].setBitrate(64);
 que[ID][6]=true;
 if(reply)await reply("Playing "+que[ID][1][0]);
 }else{
