@@ -26,7 +26,7 @@ console.log(kommandon);
   }
 })();
 
-const client = new Discord.Client({ intents: [Discord.GatewayIntentBits.Guilds,Discord.GatewayIntentBits.GuildMessages,Discord.GatewayIntentBits.DirectMessages,Discord.GatewayIntentBits.MessageContent,Discord.GatewayIntentBits.GuildVoiceStates] });
+const client = new Discord.Client({intents:[Discord.GatewayIntentBits.Guilds,Discord.GatewayIntentBits.GuildMessages,Discord.GatewayIntentBits.DirectMessages,Discord.GatewayIntentBits.MessageContent,Discord.GatewayIntentBits.GuildVoiceStates] });
 
 // when it is ready
 client.on('ready', () => {
