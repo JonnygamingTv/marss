@@ -72,8 +72,8 @@ let command = interaction.commandName.replace(/\./g,'');
 	if(!interactions[command]) {
 		if(fs.existsSync(`interaction/${command}.js`)) {
 			let rcommand=command;
-			if((commands[command]=fs.readFileSync(`interaction/${command}.js`,'utf8',(err)=>{console.log(err);})).startsWith('alias:')) {
-				rcommand = commands[command].slice(6);
+			if((interactions[command]=fs.readFileSync(`interaction/${command}.js`,'utf8',(err)=>{console.log(err);})).startsWith('alias:')) {
+				rcommand = interactions[command].slice(6);
 				interactions[command] = fs.readFileSync(`interaction/${rcommand}.js`,'utf8',(err)=>{console.log(err);});
 			}
 		}
